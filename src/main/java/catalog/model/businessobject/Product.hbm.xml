@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping package="catalog.model.businessobject">
+	<class name="Product" 
+		table="product">
+
+		<id name="id" column="ID"
+			unsaved-value="null">
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="name"
+  				  column="NAME"
+				  unique="true"
+				  not-null="true"/>
+		
+		<property name="price"
+			      column="PRICE"/>
+			      
+		<property name="width"
+			      column="WIDTH"/>
+			      
+	    <property name="height"
+	    		  column="height"/>
+			      
+		<property name="description" 
+				  column="description"/>
+				  
+		<set name="categoryIds"
+			 table="product_category"
+			 cascade="all"
+        >
+			<key column="PRODUCT_ID"/>
+			<element column="CATEGORY_ID" type="string"/>
+		</set>
+	</class>
+</hibernate-mapping>

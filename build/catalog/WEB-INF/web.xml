@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE web-app PUBLIC
+  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <display-name>Catalog Application</display-name>
+    <description>
+        JCatalog application.
+    </description>
+
+	<!-- JavaServer Faces -->
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>server</param-value>
+    </context-param>
+
+	<context-param>
+    	<param-name>javax.faces.CONFIG_FILES</param-name>
+    	<param-value>/WEB-INF/faces-config.xml,/WEB-INF/faces-managed-beans.xml,/WEB-INF/faces-navigation.xml</param-value>
+  	</context-param>
+
+    <context-param>
+        <param-name>com.sun.faces.validateXml</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>catalog.view.util.SecurityFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>*.jsf</url-pattern>
+    </filter-mapping>   
+    
+    <listener>
+        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+    </listener>
+ 
+	<!--listener>
+    	<listener-class>catalog.view.util.InitContextListener</listener-class>
+  	</listener-->
+
+    <!-- Faces Servlet -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+	<servlet>
+	   	<servlet-name>SpringContextServlet</servlet-name>
+	   	<servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>	  
+	  	<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- File Upload Servlet-->
+    <servlet>
+        <servlet-name>File Upload Servlet</servlet-name>
+        <servlet-class>catalog.view.util.FileUploadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>	
+
+    <!-- Faces Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+
+   	<!-- File Upload Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>File Upload Servlet</servlet-name>
+        <url-pattern>*.file</url-pattern>
+    </servlet-mapping>
+    
+	<!--
+	  - Loads the root application context of this web app at startup,
+	  - by default from "/WEB-INF/applicationContext.xml".
+	  - Use WebApplicationContextUtils.getWebApplicationContext(servletContext)
+	  - to access it anywhere in the web application, outside of the framework.
+	  -
+	  - The root context is the parent of all servlet-specific contexts.
+	  - This means that its beans are automatically available in these child contexts,
+	  - both for getBean(name) calls and (external) bean references.
+	  
+	  - If your web container loads listeners first then this will work fine.  Otherwise,
+	    use the SpringContextServlet to load the context.
+    	-->
+	<!--listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener-->	
+
+	<!-- Tomcat 4.1 can not read tld file from jar for jstl1.0 jarkata implementation. It's a workaround here. -->
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/c.tld</taglib-location>
+	</taglib>
+</web-app>

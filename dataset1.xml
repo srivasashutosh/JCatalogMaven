@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <product id="L001" name="Product1"/>
+  <product id="L002" name="Product2"/>
+  <product id="L003" name="Product3"/>
+  <product id="L004" name="Product4"/>
+  <product id="L005" name="Product5"/>
+  <product id="L006" name="Product6"/>
+  <product id="L007" name="Product7"/>
+  <product id="L008" name="Product8"/>
+</dataset>

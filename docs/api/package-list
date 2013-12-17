@@ -1,0 +1,12 @@
+catalog.model.businessobject
+catalog.model.dao
+catalog.model.dao.hibernate
+catalog.model.exception
+catalog.model.service
+catalog.model.service.impl
+catalog.model.util
+catalog.view.bean
+catalog.view.builder
+catalog.view.servicelocator
+catalog.view.util
+catalog.view.validator

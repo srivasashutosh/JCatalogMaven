@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/cglib-2.0-rc2.jar"/>
+	<classpathentry kind="lib" path="lib/cglib-nodep-2.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="lib/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.4.9.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/easymock-3.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/easymock-3.2-samples.jar"/>
+	<classpathentry kind="lib" path="lib/easymock-3.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/easymock-3.2-tests.jar"/>
+	<classpathentry kind="lib" path="lib/easymock-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate2.jar"/>
+	<classpathentry kind="lib" path="lib/javaActivation.jar"/>
+	<classpathentry kind="lib" path="lib/javaMail1.2.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.16.1-GA.jar"/>
+	<classpathentry kind="lib" path="lib/jsf-api.jar"/>
+	<classpathentry kind="lib" path="lib/jsf-impl.jar"/>
+	<classpathentry kind="lib" path="lib/jstl.jar"/>
+	<classpathentry kind="lib" path="lib/jta.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="lib/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/maven-surefire-plugin-2.10 (1).jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-3.0.9-stable-bin.jar"/>
+	<classpathentry kind="lib" path="lib/objenesis-2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/objenesis-2.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/objenesis-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/odmg-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-easymock-1.4.12-full.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-module-junit4-1.4.12-sources.jar"/>
+	<classpathentry kind="lib" path="lib/servlet.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/spring.jar"/>
+	<classpathentry kind="lib" path="lib/standard.jar"/>
+	<classpathentry kind="lib" path="lib/tools.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-core-3.6.3.Final.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

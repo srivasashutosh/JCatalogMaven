@@ -1,0 +1,87 @@
+Installation instruction for JCatalog Project
+
+Derek Y. Shen
+
+Assumptions:
+
+1 J2SE SDK (JDK) 1.4.2+ installed.
+
+2 ant installed.
+
+3 Tomcat 4.1.29+ installed and working.
+
+4 MySQL 4.0.16+ installed and working.
+
+
+Database Steps:
+
+1 ddl
+Run jcatalog_ddl.sql.
+
+2 dml
+Run jcatalog_dml.sql. (shell> mysql catalog < jcatalog_dml.sql > output.tab)
+
+
+Web Application Steps:
+
+1 configuration changes
+
+1.1 Spring Framework configuration
+
+1.1.1 find and open web/WEB-INF/applicationContext.xml.
+
+1.1.2 database configuration
+Under the defintion of the "dataSource" bean, modify the JDBC connection properties (url, username, password) to match the database you are using.
+
+1.1.3 email configuration (not required)
+Under the definition of the "userService" bean, modify the email properties (smtpHost, defaultSenderName, receiverAddresses).
+
+1.1.4 save the file.
+
+1.2 JavaServer Faces configuration
+
+1.2.1 find and open web/WEB-INF/faces_managed-beans.xml.
+
+1.2.2 product images directory
+Under the definition of the "applicationBean", modify the "productImageDirUri" to
+<tomcat>\webapps\catalog\images\products (<tomcat> is your tomcat installation directory).
+
+e.g.
+    <managed-property>
+    	<property-name>productImageDirUri</property-name>
+    	<value>C:\tomcat\webapps\catalog\images\products\</value>
+    </managed-property>
+    
+1.2.3 save the file.
+    
+1.3 log4j configuration
+
+1.3.1 find and open src/java/log4j.properties. 
+
+1.3.2 change the log file location:
+log4j.appender.file.File=<tomcat>/logs/catalog.log
+
+e.g. 
+
+log4j.appender.file.File=C:/tomcat/logs/catalog.log
+
+1.3.3 save the file.
+
+
+2. build the web application by "ant". (build-war is the default target).
+
+3. copy the dist/catalog.war file to the <tomcat>/webapps directory
+
+4. Start Tomcat
+
+
+For default Tomcat installation,
+JCatalog application is accessible from http://localhost:8080/catalog
+
+Administrator username: admin
+Administrator password: admin
+
+
+
+ 
+
